@@ -26,7 +26,9 @@ class HomeController extends BaseController
     public function getHome()
     {
         $products = $this->products->getAllProducts();
-      
-        return view('home.home')->with(['products'=>$products]);
+       
+       
+       
+        return view('home.home')->with(['products'=>$products,'categories'=>$this->categories]);
     }
 }

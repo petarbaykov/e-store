@@ -15,4 +15,5 @@ class Products extends Model
     public function getProductById($id){
         return DB::table($this->table)->where('id',$id)->first();
     }
+   
 }

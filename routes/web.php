@@ -17,11 +17,16 @@ Route::get('/', 'HomeController@getHome');
 Route::prefix('admin')->group(function(){
         Route::get('/add-product','AdminController@getAddProduct');
         Route::post('/add-product','AdminController@postProduct');
+        Route::get('/manage-categories','AdminController@manageCategories');
+        Route::post('save-category','AdminController@saveCategory');
 });
-
+Route::get('/product/{id}','ProductController@get');
 Route::get('products/add-to-cart/{id}','CartController@addToCart');
 Route::get('checkout','CartController@checkout');
 
 Auth::routes();
 Route::get('cart','CartController@getCart');
 Route::post('save-order','CartController@saveOrder');
+
+Route::get('profile','ProfileController@show');
+
