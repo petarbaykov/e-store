@@ -1,9 +1,10 @@
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" />
 <link href="{{asset('css/material-dashboard.css?v=1.2.0')}}" rel="stylesheet" />
+
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-
+<link href="{{asset('css/custom.css')}}" rel="stylesheet" />
     <div class="wrapper">
         <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo">
@@ -20,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{asset('/admin/add-product')}}">
                             <i class="material-icons">person</i>
                             <p>Products</p>
                         </a>
@@ -141,6 +142,7 @@
         </div>
     </div>
 <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
 <script type="text/javascript" src="{{asset('js/material.min.js')}}"></script>
 
 <script type="text/javascript" src="{{asset('js/perfect-scrollbar.jquery.min.js')}}"></script>

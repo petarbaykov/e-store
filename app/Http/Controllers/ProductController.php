@@ -18,4 +18,14 @@ class ProductController extends BaseController
 
     	return view('home.product')->with(['product'=>$product]);
     }
+
+    public function getCategory($name){
+
+    	$products_in_category = DB::table('products')
+    	->leftJoin('categories','categories.id','=','products.category_id')
+    	->where('categories.name',$name)
+        ->select('products.*','categories.name')
+    	->get();
+    	return view('home.products')->with(['products'=>$products_in_category]);
+    }
 }

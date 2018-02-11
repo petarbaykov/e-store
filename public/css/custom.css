@@ -1,0 +1,12 @@
+.form-control{
+	border-bottom:1px solid #ccc !important;
+}
+.checkout-form input{
+	    background: #F0F0E9;
+    border: 0 none !important;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 300;
+    border-radius: 0;
+}

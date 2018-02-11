@@ -7,6 +7,7 @@ use App\Products;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
 use DB;
+
 class AdminController extends BaseController
 {
     public function __construct(){
@@ -15,6 +16,7 @@ class AdminController extends BaseController
     }
 
     function getAddProduct(){
+
       return view('admin.add-product');
     }
     function postProduct(Request $request){
@@ -28,6 +30,7 @@ class AdminController extends BaseController
         $product->product_name = $request['product_name'];
         $product->product_price = $request['product_price'];
         $product->product_description = $request['product_description'];
+        $product->category_id = $request['category_id'];
         $file = Input::file('product_image');
         $image =$file->getClientOriginalName();
         $filename;
@@ -41,7 +44,7 @@ class AdminController extends BaseController
         }
         $product->product_image = $filename;
         $product->save();
-
+        return redirect()->back()->with('msg','Продуктът беше добавен успешно!');
     }
 
     public function manageCategories(){
@@ -53,5 +56,7 @@ class AdminController extends BaseController
       $data = $request->all();
 
       DB::table('categories')->insert(['name'=>$data['name'],'description'=>$data['description'],'parent'=>$data['parent']]);
+
+      return redirect()->back()->with('msg','Категорията беше добавена успешно!');
     }
 }

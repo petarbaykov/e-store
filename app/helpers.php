@@ -43,7 +43,7 @@ function generateList($parent,$categories) {
                     	echo ' <div id="'.$value->parent_name.'" class="panel-collapse collapse">
                  				 <div class="panel-body">
                  				 	<ul>
-                  					<li><a href="/category/' . $value->name . '/">' . $value->name . '</a>';
+                  					<li><a href="/categories/'.$value->parent_name.'/' . $value->name . '/">' . $value->name . '</a>';
                 	}
                     generateList($key+1,$categories);
 

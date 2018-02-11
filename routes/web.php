@@ -23,10 +23,11 @@ Route::prefix('admin')->group(function(){
 Route::get('/product/{id}','ProductController@get');
 Route::get('products/add-to-cart/{id}','CartController@addToCart');
 Route::get('checkout','CartController@checkout');
-
+Route::post('user-payment-info','CartController@postUserPaymentInfo');
 Auth::routes();
 Route::get('cart','CartController@getCart');
 Route::post('save-order','CartController@saveOrder');
 
 Route::get('profile','ProfileController@show');
 
+Route::get('categories/{category}/{subcategory}','ProductController@getCategory');

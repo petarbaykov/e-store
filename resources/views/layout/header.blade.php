@@ -61,7 +61,7 @@
               <ul class="nav navbar-nav">
                
                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                <li><a href="{{asset('checkout')}}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                 <li><a href="{{asset('cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                 @if(Auth::check())
                    <li><a href="{{asset('profile')}}"><i class="fa fa-user"></i> Account</a></li>
@@ -99,7 +99,7 @@
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
                     <li><a href="product-details.html">Product Details</a></li> 
-                    <li><a href="checkout.html">Checkout</a></li> 
+                    <li><a href="{{asset('checkout')}}">Checkout</a></li> 
                     <li><a href="{{asset('cart')}}">Cart</a></li> 
                     <li><a href="{{asset('login')}}">Login</a></li> 
                                     </ul>
